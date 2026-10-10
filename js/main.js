@@ -288,26 +288,9 @@
     return data;
   }
 
-  async function sendData(payload) {
-    if (payload._honeypot) return { ok: true }; // bot: no se envía nada
-    delete payload._honeypot;
-
-    if (!formEndpointConfigured()) {
-      throw new Error("El envío de formularios aún no está configurado en esta web (falta el servicio de formularios en js/config.js). Tu solicitud NO se ha enviado. Escríbenos por correo o teléfono mientras tanto.");
-    }
-
-    const url = CFG.formProvider === "api" ? CFG.apiEndpoint
-      : CFG.formProvider === "formsubmit" ? "https://formsubmit.co/ajax/" + encodeURIComponent(CFG.formsubmitEmail.trim())
-      : CFG.formspreeEndpoint;
-    const body = Object.assign({}, payload, { _subject: payload._subject || "Nueva solicitud desde la web", pagina: location.href });
-    if (CFG.formProvider === "formsubmit") {
-      body._template = "table";
-      body._captcha = "false";
-      if (payload.email) body._replyto = payload.email;
-    }
-
+  async function postJSON(url, body, timeoutMs) {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 45000);
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
     let res;
     try {
       res = await fetch(url, {
@@ -318,29 +301,47 @@
       });
     } catch (err) {
       throw new Error(err.name === "AbortError"
-        ? "El servidor está tardando más de lo normal y no hemos podido confirmar el envío. Es posible que tu solicitud haya llegado igualmente; si no recibes respuesta, escríbenos por correo o WhatsApp."
+        ? "El servidor está tardando más de lo normal y no hemos podido confirmar el envío."
         : "No se ha podido conectar con el servidor. Revisa tu conexión e inténtalo de nuevo.");
     } finally { clearTimeout(timer); }
-
     let json = {};
     try { json = await res.json(); } catch (_) { /* respuesta sin JSON */ }
     if (!res.ok || json.ok === false || json.success === "false" || json.success === false) {
       const msg = (json.errors && json.errors.map((e) => e.message).join(" ")) || json.error || json.message;
       throw new Error((msg ? msg + " " : "") + "La solicitud no se ha enviado. Inténtalo de nuevo en unos minutos.");
     }
-    // Copia directa al correo (FormSubmit) cuando el envío principal es Formspree.
-    // No bloquea al usuario: la solicitud ya está guardada en Formspree.
-    if (CFG.formProvider === "formspree" && isFilled(CFG.formsubmitEmail)) {
-      const copy = Object.assign({}, body, { _template: "table", _captcha: "false" });
-      if (payload.email) copy._replyto = payload.email;
-      fetch("https://formsubmit.co/ajax/" + encodeURIComponent(CFG.formsubmitEmail.trim()), {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(copy),
-        keepalive: true
-      }).catch(() => {});
-    }
     return json;
+  }
+
+  async function sendData(payload) {
+    if (payload._honeypot) return { ok: true }; // bot: no se envía nada
+    delete payload._honeypot;
+
+    if (!formEndpointConfigured()) {
+      throw new Error("El envío de formularios aún no está configurado en esta web. Tu solicitud NO se ha enviado. Escríbenos por correo o teléfono mientras tanto.");
+    }
+
+    const body = Object.assign({}, payload, { _subject: payload._subject || "Nueva solicitud desde la web", pagina: location.href });
+    const hasFormspree = isFilled(CFG.formspreeEndpoint) && /^https:\/\/formspree\.io\/f\/\w+/.test(CFG.formspreeEndpoint);
+
+    if (CFG.formProvider === "api") {
+      // 1) Correo directo desde nuestro servidor (Gmail/Resend).
+      // 2) Si falla o aún no está configurado, se guarda en Formspree para no perder la solicitud.
+      try {
+        return await postJSON(CFG.apiEndpoint, body, 20000);
+      } catch (err) {
+        if (!hasFormspree) throw err;
+        return await postJSON(CFG.formspreeEndpoint, body, 20000);
+      }
+    }
+
+    if (CFG.formProvider === "formsubmit") {
+      const fsBody = Object.assign({}, body, { _template: "table", _captcha: "false" });
+      if (payload.email) fsBody._replyto = payload.email;
+      return await postJSON("https://formsubmit.co/ajax/" + encodeURIComponent(CFG.formsubmitEmail.trim()), fsBody, 45000);
+    }
+
+    return await postJSON(CFG.formspreeEndpoint, body, 20000);
   }
 
   function setStatus(box, type, msg) {

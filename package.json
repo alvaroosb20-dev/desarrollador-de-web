@@ -3,5 +3,6 @@
   "private": true,
   "type": "module",
   "description": "Web de servicios de diseño y desarrollo web. Estática + función /api/solicitud opcional (Vercel).",
-  "engines": { "node": ">=18" }
+  "engines": { "node": ">=18" },
+  "dependencies": { "nodemailer": "^6.9.16" }
 }

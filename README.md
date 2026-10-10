@@ -28,9 +28,12 @@ Si los formularios no están configurados, **no simulan el envío**: muestran un
 
 ## Formularios
 
-### Configuración actual — FormSubmit (envío directo al correo)
-En `js/config.js`: `formProvider: "formsubmit"` y `formsubmitEmail: "webdesarrolador@gmail.com"`.
-La primera solicitud genera un correo de FormSubmit con el botón **Activate Form**; púlsalo una vez y a partir de ahí todas las solicitudes llegan a ese correo.
+### Configuración actual — correo desde tu Gmail (función /api/solicitud)
+`formProvider: "api"`. La función envía cada solicitud a tu Gmail. Si no está configurada o falla, la solicitud se guarda en Formspree (respaldo).
+
+1. En la cuenta de Google `webdesarrolador@gmail.com`: activa la **Verificación en dos pasos** y crea una **Contraseña de aplicación** en https://myaccount.google.com/apppasswords (16 letras).
+2. En Vercel → proyecto → **Settings → Environment Variables** añade `GMAIL_USER` = `webdesarrolador@gmail.com` y `GMAIL_APP_PASSWORD` = la contraseña de aplicación.
+3. **Deployments → ⋯ → Redeploy** en el último despliegue.
 
 ### Opción A — Formspree (la más rápida, sin servidor)
 1. Crea una cuenta en https://formspree.io y un formulario nuevo.
