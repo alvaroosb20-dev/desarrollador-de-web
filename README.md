@@ -28,6 +28,10 @@ Si los formularios no están configurados, **no simulan el envío**: muestran un
 
 ## Formularios
 
+### Configuración actual — FormSubmit (envío directo al correo)
+En `js/config.js`: `formProvider: "formsubmit"` y `formsubmitEmail: "webdesarrolador@gmail.com"`.
+La primera solicitud genera un correo de FormSubmit con el botón **Activate Form**; púlsalo una vez y a partir de ahí todas las solicitudes llegan a ese correo.
+
 ### Opción A — Formspree (la más rápida, sin servidor)
 1. Crea una cuenta en https://formspree.io y un formulario nuevo.
 2. Copia el endpoint (`https://formspree.io/f/xxxxxxx`).

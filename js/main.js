@@ -28,6 +28,7 @@
 
   function formEndpointConfigured() {
     if (CFG.formProvider === "api") return isFilled(CFG.apiEndpoint);
+    if (CFG.formProvider === "formsubmit") return isFilled(CFG.formsubmitEmail);
     return isFilled(CFG.formspreeEndpoint) && /^https:\/\/formspree\.io\/f\/\w+/.test(CFG.formspreeEndpoint);
   }
 
@@ -295,8 +296,15 @@
       throw new Error("El envío de formularios aún no está configurado en esta web (falta el servicio de formularios en js/config.js). Tu solicitud NO se ha enviado. Escríbenos por correo o teléfono mientras tanto.");
     }
 
-    const url = CFG.formProvider === "api" ? CFG.apiEndpoint : CFG.formspreeEndpoint;
+    const url = CFG.formProvider === "api" ? CFG.apiEndpoint
+      : CFG.formProvider === "formsubmit" ? "https://formsubmit.co/ajax/" + encodeURIComponent(CFG.formsubmitEmail.trim())
+      : CFG.formspreeEndpoint;
     const body = Object.assign({}, payload, { _subject: payload._subject || "Nueva solicitud desde la web", pagina: location.href });
+    if (CFG.formProvider === "formsubmit") {
+      body._template = "table";
+      body._captcha = "false";
+      if (payload.email) body._replyto = payload.email;
+    }
 
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 15000);
@@ -316,8 +324,8 @@
 
     let json = {};
     try { json = await res.json(); } catch (_) { /* respuesta sin JSON */ }
-    if (!res.ok || json.ok === false) {
-      const msg = (json.errors && json.errors.map((e) => e.message).join(" ")) || json.error;
+    if (!res.ok || json.ok === false || json.success === "false" || json.success === false) {
+      const msg = (json.errors && json.errors.map((e) => e.message).join(" ")) || json.error || json.message;
       throw new Error((msg ? msg + " " : "") + "La solicitud no se ha enviado. Inténtalo de nuevo en unos minutos.");
     }
     return json;
