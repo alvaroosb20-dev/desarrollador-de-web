@@ -328,6 +328,18 @@
       const msg = (json.errors && json.errors.map((e) => e.message).join(" ")) || json.error || json.message;
       throw new Error((msg ? msg + " " : "") + "La solicitud no se ha enviado. Inténtalo de nuevo en unos minutos.");
     }
+    // Copia directa al correo (FormSubmit) cuando el envío principal es Formspree.
+    // No bloquea al usuario: la solicitud ya está guardada en Formspree.
+    if (CFG.formProvider === "formspree" && isFilled(CFG.formsubmitEmail)) {
+      const copy = Object.assign({}, body, { _template: "table", _captcha: "false" });
+      if (payload.email) copy._replyto = payload.email;
+      fetch("https://formsubmit.co/ajax/" + encodeURIComponent(CFG.formsubmitEmail.trim()), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(copy),
+        keepalive: true
+      }).catch(() => {});
+    }
     return json;
   }
 

@@ -15,10 +15,12 @@ window.SITE_CONFIG = {
   /* ---- Envío de formularios ----
    * "formspree": envía a un formulario de Formspree (sin servidor propio).
    * "api":       envía a la función /api/solicitud (Vercel + Resend).
-   * "formsubmit": envía directamente al correo de formsubmitEmail (FormSubmit.co).
-   *   La primera vez llega un correo de activación: pulsa «Activate Form».
+   * "formsubmit": envía solo a FormSubmit.co (al correo de formsubmitEmail).
+   * Con "formspree" + formsubmitEmail: la solicitud se guarda en Formspree
+   * y además se manda una copia directa a ese correo vía FormSubmit.
+   *   La primera vez FormSubmit manda un correo de activación: pulsa «Activate Form».
    */
-  formProvider: "formsubmit",
+  formProvider: "formspree",
   formsubmitEmail: "webdesarrolador@gmail.com",
   formspreeEndpoint: "https://formspree.io/f/mvkzrrwl", // ej.: "https://formspree.io/f/abcdwxyz"
   apiEndpoint: "/api/solicitud",
