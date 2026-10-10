@@ -27,7 +27,7 @@ window.SITE_CONFIG = {
   calendlyUrl: "https://calendly.com/alvaroosb20", // ej.: "https://calendly.com/tu-usuario/30min"
 
   /* ---- Datos de contacto (no inventar) ---- */
-  contactEmail: "alvaroosb20@gmail.com",
+  contactEmail: "webdesarrolador@gmail.com",
   contactPhone: "+34 637 02 32 70",
   whatsappNumber: "34637023270",    // solo dígitos con prefijo
   whatsappMessage: "Hola, me gustaría información sobre una página web.",
