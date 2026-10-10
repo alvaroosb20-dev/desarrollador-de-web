@@ -82,7 +82,7 @@
           box.appendChild(a); count++;
         }
       });
-      if (!count) box.appendChild(pendingTag("enlaces a redes sociales"));
+      if (!count && CFG.showSetupWarnings !== false) box.appendChild(pendingTag("enlaces a redes sociales"));
     }
 
     // Calendly

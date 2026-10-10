@@ -17,19 +17,19 @@ window.SITE_CONFIG = {
    * "api":       envía a la función /api/solicitud (Vercel + Resend).
    */
   formProvider: "formspree",
-  formspreeEndpoint: "", // ej.: "https://formspree.io/f/abcdwxyz"
+  formspreeEndpoint: "https://formspree.io/f/mvkzrrwl", // ej.: "https://formspree.io/f/abcdwxyz"
   apiEndpoint: "/api/solicitud",
 
   /* ---- Reservas ----
    * Si pones tu enlace de Calendly, el modal de llamada ofrecerá
    * reservar directamente. Si no, se solicita por formulario.
    */
-  calendlyUrl: "", // ej.: "https://calendly.com/tu-usuario/30min"
+  calendlyUrl: "https://calendly.com/alvaroosb20", // ej.: "https://calendly.com/tu-usuario/30min"
 
   /* ---- Datos de contacto (no inventar) ---- */
-  contactEmail: "",
-  contactPhone: "",      // ej.: "+34 600 000 000"
-  whatsappNumber: "",    // solo dígitos con prefijo: "34600000000"
+  contactEmail: "alvaroosb20@gmail.com",
+  contactPhone: "+34 637 02 32 70",
+  whatsappNumber: "34637023270",    // solo dígitos con prefijo
   whatsappMessage: "Hola, me gustaría información sobre una página web.",
 
   social: {
@@ -41,9 +41,9 @@ window.SITE_CONFIG = {
 
   /* Texto sobre impuestos que se muestra bajo los precios.
    * ej.: "Precios con IGIC incluido." o "Precios sin IGIC (7 %)." */
-  taxNote: "",
+  taxNote: "IGIC (7 %) no incluido en los precios.",
 
   /* Muestra el aviso amarillo con lo que falta por configurar.
    * Ponlo en false cuando todo esté listo. */
-  showSetupWarnings: true
+  showSetupWarnings: false
 };
