@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desarrollador de Web — Páginas web y tiendas online para negocios</title>
+  <meta name="description" content="Diseño y desarrollo de páginas web modernas, rápidas y profesionales para autónomos, emprendedores y empresas. Webs desde 199,99 €, tiendas online y mantenimiento.">
+  <meta name="theme-color" content="#07090d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Desarrollador de Web — Páginas web que hacen crecer tu negocio">
+  <meta property="og:description" content="Webs de presentación, webs avanzadas y tiendas online con precios claros.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div id="setup-banner" class="setup-banner" hidden></div>
+
+  <!-- ===== Cabecera ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Desarrollador de Web, inicio">
+        <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span class="logo-text">Desarrollador<span>de Web</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#portfolio">Ejemplos</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="btn btn-primary btn-sm nav-cta" data-open="call-modal" type="button">Agendar una llamada</button>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Diseño y desarrollo web</p>
+          <h1>Creamos páginas web que hacen <em>crecer</em> tu negocio</h1>
+          <p class="lead">Diseñamos páginas web modernas, rápidas y profesionales para ayudarte a conseguir más clientes y llevar tu negocio al siguiente nivel.</p>
+          <div class="hero-actions">
+            <a href="#precios" class="btn btn-primary btn-lg">Ver nuestros planes</a>
+            <button type="button" class="btn btn-ghost btn-lg" data-open="call-modal">Agendar una llamada</button>
+          </div>
+          <ul class="hero-points">
+            <li>Precios cerrados y claros</li>
+            <li>Adaptada a móviles</li>
+            <li>Sin compromiso inicial</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="device-laptop">
+            <div class="browser-bar"><i></i><i></i><i></i><span>tunegocio.es</span></div>
+            <div class="browser-body">
+              <div class="mk-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="mk-hero">
+                <div class="mk-lines"><b></b><b></b><span></span><em></em></div>
+                <div class="mk-img"></div>
+              </div>
+              <div class="mk-cards"><div></div><div></div><div></div></div>
+            </div>
+          </div>
+          <div class="device-phone">
+            <div class="phone-notch"></div>
+            <div class="mk-img small"></div>
+            <div class="mk-lines"><b></b><span></span><span></span><em></em></div>
+            <div class="mk-cards col"><div></div><div></div></div>
+          </div>
+          <div class="float-chip chip-1"><span class="dot"></span>Velocidad optimizada</div>
+          <div class="float-chip chip-2"><span class="dot"></span>SEO básico incluido</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2>Todo lo que tu negocio necesita para estar en Internet</h2>
+          <p>Desde una web de presentación sencilla hasta una tienda online completa, con el mismo cuidado por el detalle.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="card service reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg></div>
+            <h3>Diseño de páginas web</h3>
+            <p>Webs con una imagen cuidada y coherente con tu marca, pensadas para que el visitante entienda rápido qué ofreces.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></div>
+            <h3>Desarrollo web a medida</h3>
+            <p>Funcionalidades específicas para tu proyecto cuando una plantilla no es suficiente.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h2l2 10h10l2-7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></div>
+            <h3>Tiendas online</h3>
+            <p>Catálogo, carrito y pasarela de pago para empezar a vender tus productos por Internet.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5"/></svg></div>
+            <h3>Rediseño de páginas web</h3>
+            <p>Renovamos tu web actual para que se vea moderna, cargue más rápido y sea más fácil de usar.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18h2"/></svg></div>
+            <h3>Optimización para móviles</h3>
+            <p>Tu web se adapta a cualquier pantalla: móvil, tablet y ordenador.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></div>
+            <h3>SEO básico</h3>
+            <p>Estructura, títulos y descripciones correctos para que los buscadores entiendan tu web.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5l3 3 5.8-5.8a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+            <h3>Mantenimiento web</h3>
+            <p>Actualizaciones, copias de seguridad y pequeños cambios para que tu web siga funcionando bien.</p>
+          </article>
+          <article class="card service service-cta reveal">
+            <h3>¿No sabes qué necesitas?</h3>
+            <p>Cuéntanos tu idea en una llamada breve y te orientamos.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-open="call-modal">Agendar una llamada</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Precios ===== -->
+    <section class="section section-alt" id="precios">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Planes y precios</p>
+          <h2>Elige el plan que encaja con tu negocio</h2>
+          <p>Precios claros desde el principio. Antes de empezar revisamos tu proyecto contigo para confirmar el alcance.</p>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="card plan reveal">
+            <h3>Web Básica</h3>
+            <p class="plan-for">Ideal para autónomos, pequeños negocios y personas que necesitan una presencia profesional en Internet.</p>
+            <p class="price">199,99&nbsp;€<small>pago único</small></p>
+            <button type="button" class="btn btn-ghost btn-block" data-plan="basica">Contratar Web Básica</button>
+            <ul class="features">
+              <li>Página web de presentación</li>
+              <li>Hasta 3 secciones o páginas sencillas</li>
+              <li>Diseño moderno y adaptable a móviles</li>
+              <li>Información del negocio y servicios</li>
+              <li>Formulario de contacto</li>
+              <li>Botón de WhatsApp</li>
+              <li>Enlaces a redes sociales</li>
+              <li>Optimización básica para buscadores (SEO)</li>
+              <li>Configuración básica de rendimiento</li>
+              <li>Una ronda de modificaciones</li>
+              <li>Entrega estimada de 5 a 7 días laborables, desde que se reciba todo el material necesario</li>
+            </ul>
+          </article>
+
+          <article class="card plan plan-featured reveal">
+            <span class="badge">Más popular</span>
+            <h3>Web Avanzada</h3>
+            <p class="plan-for">Ideal para negocios que quieren una web más completa, con más apartados y funcionalidades.</p>
+            <p class="price">349,99&nbsp;€<small>pago único</small></p>
+            <button type="button" class="btn btn-primary btn-block" data-plan="avanzada">Contratar Web Avanzada</button>
+            <p class="features-intro">Todo lo del plan Básico, además de:</p>
+            <ul class="features">
+              <li>Hasta 7 páginas o secciones, según el proyecto</li>
+              <li>Diseño personalizado para la marca</li>
+              <li>Animaciones y efectos visuales</li>
+              <li>Galería de imágenes o portfolio</li>
+              <li>Formularios de contacto avanzados</li>
+              <li>Integración con WhatsApp y redes sociales</li>
+              <li>SEO inicial más completo</li>
+              <li>Optimización de velocidad</li>
+              <li>Mapa de Google Maps, cuando proceda</li>
+              <li>Dos rondas de modificaciones</li>
+              <li>Entrega estimada de 7 a 12 días laborables</li>
+            </ul>
+          </article>
+
+          <article class="card plan reveal">
+            <h3>Tienda Online</h3>
+            <p class="plan-for">Ideal para negocios que quieren vender productos por Internet.</p>
+            <p class="price">599,99&nbsp;€<small>pago único</small></p>
+            <button type="button" class="btn btn-ghost btn-block" data-plan="tienda">Contratar Tienda Online</button>
+            <ul class="features">
+              <li>Diseño personalizado de tienda online</li>
+              <li>Catálogo inicial de hasta 20 productos</li>
+              <li>Categorías de productos</li>
+              <li>Carrito de compra</li>
+              <li>Configuración inicial del proceso de pago mediante una plataforma compatible</li>
+              <li>Integración de Stripe o una alternativa compatible, sujeta a la configuración y aprobación de la cuenta</li>
+              <li>Configuración básica de gastos de envío</li>
+              <li>Diseño adaptable a móviles</li>
+              <li>Panel de administración mediante una plataforma de comercio electrónico compatible</li>
+              <li>Configuración básica de SEO</li>
+              <li>Páginas de contacto y políticas legales facilitadas o revisadas por el cliente</li>
+              <li>Dos rondas de modificaciones</li>
+              <li>Entrega estimada de 10 a 20 días laborables</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="pricing-notes reveal">
+          <p>Las comisiones de las plataformas de pago, el alojamiento, el dominio, las licencias y otros servicios externos <strong>no están incluidos</strong> salvo que se indique expresamente.</p>
+          <p data-config="taxNote" data-pending-label="Indicar si los precios incluyen IGIC/IVA"></p>
+        </div>
+
+        <div class="pricing-cta reveal">
+          <p>¿Tienes dudas sobre qué plan elegir?</p>
+          <button type="button" class="btn btn-ghost" data-open="call-modal">Agendar una llamada</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Mantenimiento ===== -->
+    <section class="section" id="mantenimiento">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Opcional</p>
+          <h2>Mantenimiento web mensual</h2>
+          <p>Si prefieres despreocuparte, nos encargamos de que tu web siga actualizada y funcionando. Es totalmente opcional y se puede cancelar.</p>
+        </header>
+
+        <div class="maint-grid">
+          <article class="card maint reveal">
+            <div class="maint-head">
+              <h3>Mantenimiento básico</h3>
+              <p class="price price-sm">19,99&nbsp;€<small>/mes</small></p>
+            </div>
+            <ul class="features">
+              <li>Actualizaciones de seguridad y del sistema de la web</li>
+              <li>Copia de seguridad mensual</li>
+              <li>Revisión mensual de que la web funciona correctamente</li>
+              <li>Hasta 30 minutos al mes de pequeños cambios de contenido (textos, imágenes, horarios)</li>
+              <li>Soporte por correo con respuesta en un máximo de 3 días laborables</li>
+            </ul>
+            <button type="button" class="btn btn-ghost btn-block" data-plan="mant-basico">Contratar mantenimiento básico</button>
+          </article>
+
+          <article class="card maint reveal">
+            <div class="maint-head">
+              <h3>Mantenimiento avanzado</h3>
+              <p class="price price-sm">39,99&nbsp;€<small>/mes</small></p>
+            </div>
+            <ul class="features">
+              <li>Todo lo del mantenimiento básico</li>
+              <li>Copia de seguridad semanal</li>
+              <li>Hasta 2 horas al mes de cambios de contenido o pequeños ajustes de diseño</li>
+              <li>Revisión mensual de velocidad y SEO básico</li>
+              <li>Soporte prioritario por correo o WhatsApp, respuesta en un máximo de 2 días laborables</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block" data-plan="mant-avanzado">Contratar mantenimiento avanzado</button>
+          </article>
+        </div>
+        <p class="small-note reveal">Las horas no consumidas no se acumulan para el mes siguiente. No incluye nuevas secciones o funcionalidades (se presupuestan aparte). El alojamiento, el dominio, las licencias y otros servicios externos pueden suponer costes adicionales.</p>
+      </div>
+    </section>
+
+    <!-- ===== Proceso ===== -->
+    <section class="section section-alt" id="proceso">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2>Un proceso sencillo, en cuatro pasos</h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Cuéntanos tu idea</h3>
+            <p>Rellenas el formulario con lo que necesitas y te contactamos para resolver dudas.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Planificamos el proyecto</h3>
+            <p>Definimos juntos el diseño, las funcionalidades y el alcance antes de empezar.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Diseñamos tu web</h3>
+            <p>Desarrollamos la página y la revisas para pedir los cambios incluidos en tu plan.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">04</span>
+            <h3>Publicamos tu proyecto</h3>
+            <p>Entregamos la web cuando esté aprobada y configurada en tu dominio.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio ===== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Ejemplos de diseño</p>
+          <h2>Ideas para distintos sectores</h2>
+          <p>Diseños conceptuales de demostración. No corresponden a clientes reales: sirven para mostrar el estilo que podemos aplicar a cada tipo de negocio.</p>
+        </header>
+
+        <div class="portfolio-grid">
+          <figure class="demo reveal" style="--demo:#e07a3f">
+            <div class="demo-screen">
+              <span class="demo-tag">Ejemplo</span>
+              <div class="demo-nav"><b>Brasa&amp;Sal</b><span>Carta · Reservas</span></div>
+              <div class="demo-hero"><strong>Cocina de temporada</strong><i>Reservar mesa</i></div>
+              <div class="demo-row"><div></div><div></div><div></div></div>
+            </div>
+            <figcaption><h3>Restaurante</h3><p>Carta, reservas y ubicación a un toque.</p></figcaption>
+          </figure>
+
+          <figure class="demo reveal" style="--demo:#f2c94c">
+            <div class="demo-screen">
+              <span class="demo-tag">Ejemplo</span>
+              <div class="demo-nav"><b>Motor Norte</b><span>Servicios · Cita</span></div>
+              <div class="demo-hero"><strong>Tu taller de confianza</strong><i>Pedir cita</i></div>
+              <div class="demo-row"><div></div><div></div><div></div></div>
+            </div>
+            <figcaption><h3>Taller mecánico</h3><p>Servicios, cita previa y WhatsApp directo.</p></figcaption>
+          </figure>
+
+          <figure class="demo reveal" style="--demo:#e8e3da">
+            <div class="demo-screen">
+              <span class="demo-tag">Ejemplo</span>
+              <div class="demo-nav"><b>ATELIER</b><span>Colección · Bolsa</span></div>
+              <div class="demo-hero"><strong>Nueva colección</strong><i>Ver prendas</i></div>
+              <div class="demo-row tall"><div></div><div></div><div></div></div>
+            </div>
+            <figcaption><h3>Marca de ropa</h3><p>Estética editorial y fotografía protagonista.</p></figcaption>
+          </figure>
+
+          <figure class="demo reveal" style="--demo:#4cc9a7">
+            <div class="demo-screen">
+              <span class="demo-tag">Ejemplo</span>
+              <div class="demo-nav"><b>Clara Asesores</b><span>Servicios · Contacto</span></div>
+              <div class="demo-hero"><strong>Gestión sin complicaciones</strong><i>Pedir consulta</i></div>
+              <div class="demo-row"><div></div><div></div><div></div></div>
+            </div>
+            <figcaption><h3>Negocio de servicios</h3><p>Confianza, claridad y captación de contactos.</p></figcaption>
+          </figure>
+
+          <figure class="demo reveal" style="--demo:#8b7cf6">
+            <div class="demo-screen">
+              <span class="demo-tag">Ejemplo</span>
+              <div class="demo-nav"><b>Casa Verde</b><span>Tienda · Carrito (2)</span></div>
+              <div class="demo-hero"><strong>Plantas a domicilio</strong><i>Comprar ahora</i></div>
+              <div class="demo-row"><div></div><div></div><div></div></div>
+            </div>
+            <figcaption><h3>Tienda online</h3><p>Catálogo, carrito y pago seguro.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-alt" id="faq">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Resolvemos tus dudas</h2>
+        </header>
+
+        <div class="faq reveal">
+          <details>
+            <summary>¿Cuánto tarda en crearse una página web?</summary>
+            <p>Depende del plan: de 5 a 7 días laborables para la Web Básica, de 7 a 12 para la Web Avanzada y de 10 a 20 para la Tienda Online. Los plazos empiezan a contar cuando recibimos todo el material necesario (textos, imágenes, logotipo y accesos) y pueden variar si el proyecto cambia de alcance.</p>
+          </details>
+          <details>
+            <summary>¿Qué necesito para empezar?</summary>
+            <p>Rellenar el formulario de solicitud. Después te pediremos el contenido de la web: textos, fotos, logotipo (si lo tienes), datos de contacto y, si ya los tienes, los accesos a tu dominio y alojamiento.</p>
+          </details>
+          <details>
+            <summary>¿El dominio y el alojamiento están incluidos?</summary>
+            <p>No, salvo que se indique expresamente en tu presupuesto. Te ayudamos a elegirlos y a configurarlos, pero el coste lo paga el cliente directamente al proveedor, para que queden siempre a tu nombre.</p>
+          </details>
+          <details>
+            <summary>¿Puedo solicitar cambios?</summary>
+            <p>Sí. La Web Básica incluye una ronda de modificaciones; la Web Avanzada y la Tienda Online, dos. Los cambios adicionales o las nuevas secciones se presupuestan aparte.</p>
+          </details>
+          <details>
+            <summary>¿La web se verá bien en móviles?</summary>
+            <p>Sí. Todos los planes incluyen diseño adaptable a móviles, tablets y ordenadores, y revisamos la web en distintos tamaños de pantalla antes de entregarla.</p>
+          </details>
+          <details>
+            <summary>¿Puedo contratar mantenimiento mensual?</summary>
+            <p>Sí, es opcional. Hay dos modalidades: básica (19,99 €/mes) y avanzada (39,99 €/mes). Puedes ver qué incluye cada una en la <a href="#mantenimiento">sección de mantenimiento</a>.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo pagar?</summary>
+            <p>No se cobra nada a través de esta web. Cuando revisemos tu solicitud te enviaremos un presupuesto con los métodos de pago disponibles y las condiciones (por ejemplo, si se requiere un anticipo antes de empezar). Consulta también las <a href="legal/condiciones.html">condiciones de contratación</a>.</p>
+          </details>
+          <details>
+            <summary>¿Puedo ampliar mi web en el futuro?</summary>
+            <p>Sí. Puedes añadir secciones, funcionalidades o pasar de una web a una tienda online más adelante. Cada ampliación se presupuesta según lo que necesites.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA final ===== -->
+    <section class="section cta-band">
+      <div class="container cta-inner reveal">
+        <h2>¿Empezamos tu web?</h2>
+        <p>Cuéntanos tu proyecto y te respondemos con una propuesta clara.</p>
+        <div class="hero-actions center">
+          <button type="button" class="btn btn-primary btn-lg" data-plan="">Solicitar presupuesto</button>
+          <button type="button" class="btn btn-ghost btn-lg" data-open="call-modal">Agendar una llamada</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2>Hablemos de tu proyecto</h2>
+          <p>Escríbenos y te responderemos lo antes posible.</p>
+          <ul class="contact-list">
+            <li><span>Correo</span><span data-config="contactEmail" data-pending-label="Correo de contacto"></span></li>
+            <li><span>Teléfono</span><span data-config="contactPhone" data-pending-label="Teléfono de contacto"></span></li>
+            <li class="wa-line" hidden><span>WhatsApp</span><a class="link" data-whatsapp href="#" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="card form reveal" novalidate>
+          <div class="field">
+            <label for="c-nombre">Nombre <abbr title="obligatorio">*</abbr></label>
+            <input id="c-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120">
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="c-email">Correo electrónico <abbr title="obligatorio">*</abbr></label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required maxlength="160">
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="c-mensaje">Mensaje <abbr title="obligatorio">*</abbr></label>
+            <textarea id="c-mensaje" name="mensaje" rows="5" required maxlength="3000"></textarea>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="field check">
+            <input id="c-priv" name="privacidad" type="checkbox" required value="Aceptada">
+            <label for="c-priv">He leído y acepto la <a href="legal/privacidad.html" target="_blank">política de privacidad</a>. <abbr title="obligatorio">*</abbr></label>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-status" role="status" aria-live="polite"></div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pie ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span><span class="logo-text">Desarrollador<span>de Web</span></span></a>
+        <p class="footer-text">Diseño y desarrollo de páginas web y tiendas online para autónomos, emprendedores y empresas.</p>
+        <div class="socials" id="socials"></div>
+      </div>
+      <nav aria-label="Secciones">
+        <h4>Web</h4>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#mantenimiento">Mantenimiento</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal/privacidad.html">Política de privacidad</a></li>
+          <li><a href="legal/cookies.html">Política de cookies</a></li>
+          <li><a href="legal/aviso-legal.html">Aviso legal</a></li>
+          <li><a href="legal/condiciones.html">Condiciones de contratación</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li data-config="contactEmail" data-pending-label="Correo"></li>
+          <li data-config="contactPhone" data-pending-label="Teléfono"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Desarrollador de Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-whatsapp href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.7 9.7 0 0 0-8.3 14.8L2.3 21.8l4.9-1.3A9.7 9.7 0 1 0 12 2.2zm5.6 13.7c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a17 17 0 0 1-1.7-.6c-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg>
+  </a>
+
+  <!-- ===== Modal: contratación ===== -->
+  <div class="modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close aria-label="Cerrar">×</button>
+
+      <div class="order-head">
+        <p class="eyebrow">Solicitud de contratación</p>
+        <h2 id="order-title">Cuéntanos tu proyecto</h2>
+        <div class="selected-plan" id="selected-plan" hidden>
+          <span id="selected-plan-name"></span>
+          <strong id="selected-plan-price"></strong>
+        </div>
+        <ol class="progress" aria-label="Progreso">
+          <li class="is-active">Datos</li><li>Revisión</li><li>Enviado</li>
+        </ol>
+      </div>
+
+      <!-- Paso 1 -->
+      <form id="order-form" class="form" novalidate>
+        <div class="form-alert" role="alert" hidden></div>
+
+        <fieldset>
+          <legend>Servicio</legend>
+          <div class="field">
+            <label for="o-plan">Plan elegido <abbr title="obligatorio">*</abbr></label>
+            <select id="o-plan" name="plan" required>
+              <option value="">Selecciona un plan</option>
+              <option value="basica">Web Básica — 199,99 €</option>
+              <option value="avanzada">Web Avanzada — 349,99 €</option>
+              <option value="tienda">Tienda Online — 599,99 €</option>
+              <option value="mant-basico">Mantenimiento básico — 19,99 €/mes</option>
+              <option value="mant-avanzado">Mantenimiento avanzado — 39,99 €/mes</option>
+              <option value="no-se">Aún no lo sé, quiero que me aconsejéis</option>
+            </select>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tus datos</legend>
+          <div class="grid-2">
+            <div class="field">
+              <label for="o-nombre">Nombre y apellidos <abbr title="obligatorio">*</abbr></label>
+              <input id="o-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120">
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="o-empresa">Empresa o negocio <span class="opt">(si existe)</span></label>
+              <input id="o-empresa" name="empresa" type="text" autocomplete="organization" maxlength="120">
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="o-email">Correo electrónico <abbr title="obligatorio">*</abbr></label>
+              <input id="o-email" name="email" type="email" autocomplete="email" required maxlength="160">
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="o-tel">Teléfono de contacto <abbr title="obligatorio">*</abbr></label>
+              <input id="o-tel" name="telefono" type="tel" autocomplete="tel" required maxlength="30" data-validate="phone">
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu proyecto</legend>
+          <div class="grid-2">
+            <div class="field">
+              <label for="o-sector">Sector del negocio <abbr title="obligatorio">*</abbr></label>
+              <input id="o-sector" name="sector" type="text" required maxlength="120" placeholder="Ej.: restauración, taller, moda…">
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="o-tipo">Tipo de página web <abbr title="obligatorio">*</abbr></label>
+              <select id="o-tipo" name="tipo_web" required>
+                <option value="">Selecciona una opción</option>
+                <option>Web de presentación</option>
+                <option>Web corporativa con varias secciones</option>
+                <option>Tienda online</option>
+                <option>Portfolio o galería</option>
+                <option>Landing page para una campaña</option>
+                <option>Rediseño de una web existente</option>
+                <option>Otro</option>
+              </select>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="o-objetivo">Objetivo principal <abbr title="obligatorio">*</abbr></label>
+              <select id="o-objetivo" name="objetivo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Conseguir más clientes o contactos</option>
+                <option>Vender productos online</option>
+                <option>Dar a conocer mi marca</option>
+                <option>Recibir reservas o citas</option>
+                <option>Mostrar mis trabajos</option>
+                <option>Otro</option>
+              </select>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="o-presupuesto">Presupuesto aproximado <abbr title="obligatorio">*</abbr></label>
+              <select id="o-presupuesto" name="presupuesto" required>
+                <option value="">Selecciona una opción</option>
+                <option>Menos de 200 €</option>
+                <option>200 € – 400 €</option>
+                <option>400 € – 700 €</option>
+                <option>Más de 700 €</option>
+                <option>Todavía no lo sé</option>
+              </select>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field" role="radiogroup" aria-labelledby="lbl-dominio">
+              <p class="label" id="lbl-dominio">¿Tienes dominio? <abbr title="obligatorio">*</abbr></p>
+              <div class="pills">
+                <label><input type="radio" name="dominio" value="Sí" required><span>Sí</span></label>
+                <label><input type="radio" name="dominio" value="No"><span>No</span></label>
+                <label><input type="radio" name="dominio" value="No lo sé"><span>No lo sé</span></label>
+              </div>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field" role="radiogroup" aria-labelledby="lbl-logo">
+              <p class="label" id="lbl-logo">¿Tienes logotipo e imágenes? <abbr title="obligatorio">*</abbr></p>
+              <div class="pills">
+                <label><input type="radio" name="logo_imagenes" value="Sí, ambos" required><span>Sí, ambos</span></label>
+                <label><input type="radio" name="logo_imagenes" value="Solo logotipo"><span>Solo logotipo</span></label>
+                <label><input type="radio" name="logo_imagenes" value="Solo imágenes"><span>Solo imágenes</span></label>
+                <label><input type="radio" name="logo_imagenes" value="No"><span>No</span></label>
+              </div>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <p class="label">Funcionalidades que necesitas <span class="opt">(marca las que quieras)</span></p>
+            <div class="pills">
+              <label><input type="checkbox" name="funcionalidades" value="Formulario de contacto"><span>Formulario de contacto</span></label>
+              <label><input type="checkbox" name="funcionalidades" value="WhatsApp"><span>WhatsApp</span></label>
+              <label><input type="checkbox" name="funcionalidades" value="Galería / portfolio"><span>Galería / portfolio</span></label>
+              <label><input type="checkbox" name="funcionalidades" value="Reservas o citas"><span>Reservas o citas</span></label>
+              <label><input type="checkbox" name="funcionalidades" value="Blog"><span>Blog</span></label>
+              <label><input type="checkbox" name="funcionalidades" value="Tienda / pagos online"><span>Tienda / pagos online</span></label>
+              <label><input type="checkbox" name="funcionalidades" value="Google Maps"><span>Google Maps</span></label>
+              <label><input type="checkbox" name="funcionalidades" value="Varios idiomas"><span>Varios idiomas</span></label>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="o-fecha">Fecha deseada de entrega <span class="opt">(opcional)</span></label>
+              <input id="o-fecha" name="fecha_entrega" type="date">
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="o-desc">Descripción del proyecto <abbr title="obligatorio">*</abbr></label>
+            <textarea id="o-desc" name="descripcion" rows="5" required minlength="20" maxlength="4000" placeholder="Qué hace tu negocio, qué te gustaría tener en la web, webs que te gusten como referencia…"></textarea>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field check">
+            <input id="o-priv" name="privacidad" type="checkbox" required value="Aceptada">
+            <label for="o-priv">He leído y acepto la <a href="legal/privacidad.html" target="_blank">política de privacidad</a>. <abbr title="obligatorio">*</abbr></label>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+        </fieldset>
+
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-primary btn-block">Revisar solicitud</button>
+        <p class="small-note">Enviar la solicitud no supone ningún pago ni compromiso. Te responderemos con un presupuesto.</p>
+      </form>
+
+      <!-- Paso 2 -->
+      <div id="order-review" class="review" hidden>
+        <p>Revisa que todo esté correcto antes de enviar.</p>
+        <dl id="order-summary" class="summary"></dl>
+        <div class="form-status" role="status" aria-live="polite"></div>
+        <div class="review-actions">
+          <button type="button" class="btn btn-ghost" id="order-edit">Editar datos</button>
+          <button type="button" class="btn btn-primary" id="order-send">Enviar solicitud</button>
+        </div>
+      </div>
+
+      <!-- Paso 3 -->
+      <div id="order-done" class="done" hidden tabindex="-1">
+        <div class="done-icon" aria-hidden="true">✓</div>
+        <h3>Solicitud recibida</h3>
+        <p>Hemos recibido tu solicitud correctamente. Te responderemos en el correo que nos has indicado con los siguientes pasos y el presupuesto.</p>
+        <button type="button" class="btn btn-primary" data-close>Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Modal: llamada ===== -->
+  <div class="modal" id="call-modal" role="dialog" aria-modal="true" aria-labelledby="call-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel modal-sm">
+      <button class="modal-close" type="button" data-close aria-label="Cerrar">×</button>
+      <p class="eyebrow">Llamada sin compromiso</p>
+      <h2 id="call-title">Agendar una llamada</h2>
+
+      <div class="calendly-box" id="calendly-box" hidden>
+        <p>Elige directamente un hueco libre en nuestra agenda:</p>
+        <a class="btn btn-primary btn-block" id="calendly-link" href="#" target="_blank" rel="noopener">Ver horarios disponibles</a>
+        <p class="divider"><span>o envíanos tu preferencia</span></p>
+      </div>
+
+      <form id="call-form" class="form" novalidate>
+        <div class="form-alert" role="alert" hidden></div>
+        <div class="field">
+          <label for="k-nombre">Nombre <abbr title="obligatorio">*</abbr></label>
+          <input id="k-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="k-email">Correo electrónico <abbr title="obligatorio">*</abbr></label>
+          <input id="k-email" name="email" type="email" autocomplete="email" required maxlength="160">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="k-tel">Teléfono <span class="opt">(opcional)</span></label>
+          <input id="k-tel" name="telefono" type="tel" autocomplete="tel" maxlength="30" data-validate="phone">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="k-fecha">Fecha y hora preferidas <abbr title="obligatorio">*</abbr></label>
+          <input id="k-fecha" name="fecha_hora" type="datetime-local" required data-validate="future">
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="k-motivo">Motivo de la llamada <abbr title="obligatorio">*</abbr></label>
+          <textarea id="k-motivo" name="motivo" rows="3" required maxlength="2000"></textarea>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+        <div class="field check">
+          <input id="k-priv" name="privacidad" type="checkbox" required value="Aceptada">
+          <label for="k-priv">Acepto la <a href="legal/privacidad.html" target="_blank">política de privacidad</a>. <abbr title="obligatorio">*</abbr></label>
+          <p class="field-error" aria-live="polite"></p>
+        </div>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-status" role="status" aria-live="polite"></div>
+        <button type="submit" class="btn btn-primary btn-block">Solicitar llamada</button>
+        <p class="small-note">Te confirmaremos la hora por correo. Si no está disponible, te propondremos otra.</p>
+      </form>
+
+      <div id="call-done" class="done" hidden tabindex="-1">
+        <div class="done-icon" aria-hidden="true">✓</div>
+        <h3>Solicitud enviada</h3>
+        <p>Hemos recibido tu petición de llamada. Te escribiremos para confirmar el día y la hora.</p>
+        <button type="button" class="btn btn-primary" data-close>Cerrar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

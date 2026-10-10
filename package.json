@@ -1,0 +1,7 @@
+{
+  "name": "desarrollador-de-web",
+  "private": true,
+  "type": "module",
+  "description": "Web de servicios de diseño y desarrollo web. Estática + función /api/solicitud opcional (Vercel).",
+  "engines": { "node": ">=18" }
+}
