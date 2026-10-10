@@ -307,7 +307,7 @@
     }
 
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 15000);
+    const timer = setTimeout(() => controller.abort(), 45000);
     let res;
     try {
       res = await fetch(url, {
@@ -318,7 +318,7 @@
       });
     } catch (err) {
       throw new Error(err.name === "AbortError"
-        ? "El servidor ha tardado demasiado en responder. Tu solicitud no se ha enviado; inténtalo de nuevo."
+        ? "El servidor está tardando más de lo normal y no hemos podido confirmar el envío. Es posible que tu solicitud haya llegado igualmente; si no recibes respuesta, escríbenos por correo o WhatsApp."
         : "No se ha podido conectar con el servidor. Revisa tu conexión e inténtalo de nuevo.");
     } finally { clearTimeout(timer); }
 
